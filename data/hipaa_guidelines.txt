@@ -1,0 +1,48 @@
+﻿HIPAA PRIVACY AND PATIENT RIGHTS GUIDELINES
+MedAssist Healthcare System
+Document Version: 2024-01
+
+OVERVIEW
+MedAssist Healthcare System is committed to protecting the privacy and security of your health information in accordance with the Health Insurance Portability and Accountability Act (HIPAA) of 1996 and applicable state laws. This document summarizes your rights as a patient and our obligations as a covered entity.
+
+WHAT IS PROTECTED HEALTH INFORMATION (PHI)?
+Protected Health Information (PHI) includes any individually identifiable health information such as:
+- Your name, address, date of birth, or Social Security Number combined with health data
+- Medical records, diagnoses, treatment history, lab results, and prescriptions
+- Billing information tied to your healthcare services
+- Any past, present, or future health condition or treatment
+
+YOUR RIGHTS UNDER HIPAA
+
+Right to Access Your Records
+You have the right to inspect and obtain a copy of your medical records maintained by MedAssist. Requests must be submitted in writing to our Health Information Management (HIM) department. We will respond within 30 days. A reasonable copying fee may apply.
+
+Right to Request Amendments
+If you believe your health record contains an error, you may request an amendment. Submit your request in writing. We may deny the request if the information was not created by MedAssist, is accurate and complete, or is not part of the designated record set.
+
+Right to Accounting of Disclosures
+You may request a list of disclosures of your PHI made without your authorization in the past six years. Some disclosures (e.g., for treatment, payment, healthcare operations) are exempt from this accounting.
+
+Right to Request Restrictions
+You may request restrictions on how we use or disclose your PHI for treatment, payment, or healthcare operations. We are not always required to agree to your request, but we must comply if you request that we not disclose your PHI to your health insurer for services you have paid in full out-of-pocket.
+
+Right to Confidential Communications
+You may request that we communicate with you by specific means (e.g., only by mail or at a specific phone number). We will accommodate reasonable requests.
+
+Right to File a Complaint
+If you believe your privacy rights have been violated, you may file a complaint with MedAssist Privacy Officer or with the U.S. Department of Health and Human Services (HHS) Office for Civil Rights (OCR) at hhs.gov/ocr. We will not retaliate against you for filing a complaint.
+
+HOW WE USE AND DISCLOSE YOUR PHI
+We may use and disclose your PHI without your authorization for:
+- Treatment: Sharing records with specialists, hospitals, or other providers involved in your care
+- Payment: Submitting claims and billing your insurance company
+- Healthcare operations: Quality improvement, staff training, compliance audits
+
+All other disclosures require your written authorization, which you may revoke at any time.
+
+DATA SECURITY
+MedAssist uses industry-standard encryption, access controls, and audit trails to protect electronic PHI (ePHI). All staff are trained annually on HIPAA compliance.
+
+CONTACT
+MedAssist Privacy Officer: privacy@medassist.example.com
+Phone: 1800-MED-PRIVACY

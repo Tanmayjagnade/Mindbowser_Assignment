@@ -1,0 +1,383 @@
+DOCUMENT: DIABETES MELLITUS - COMPREHENSIVE CLINICAL GUIDE
+Source: Healthcare AI Knowledge Base | Category: Endocrinology
+Version: 1.0 | Last Updated: 2024
+
+================================================================================
+SECTION 1: WHAT IS DIABETES?
+================================================================================
+
+Diabetes Mellitus is a chronic metabolic disorder characterized by elevated blood 
+glucose (hyperglycemia) resulting from defects in insulin secretion, insulin action, 
+or both.
+
+INSULIN: A hormone produced by beta cells of the pancreatic islets of Langerhans.
+- Allows cells to absorb glucose from the blood for energy.
+- Signals the liver to store glucose as glycogen.
+- Without adequate insulin or insulin action, glucose builds up in the blood.
+
+NORMAL BLOOD GLUCOSE VALUES:
+- Fasting blood glucose: 70-99 mg/dL (3.9-5.5 mmol/L)
+- 2-hour post-meal (postprandial): < 140 mg/dL (< 7.8 mmol/L)
+- HbA1c (Glycated Hemoglobin): < 5.7%
+
+PREDIABETES:
+- Fasting glucose: 100-125 mg/dL
+- 2-hour glucose: 140-199 mg/dL
+- HbA1c: 5.7-6.4%
+- Without intervention, 15-30% of prediabetics develop Type 2 Diabetes within 5 years.
+
+DIAGNOSIS OF DIABETES (any one of the following):
+- Fasting plasma glucose ≥ 126 mg/dL (on two occasions)
+- 2-hour plasma glucose ≥ 200 mg/dL during 75g OGTT
+- HbA1c ≥ 6.5% (confirmed with repeat testing)
+- Random plasma glucose ≥ 200 mg/dL with symptoms
+
+================================================================================
+SECTION 2: TYPES OF DIABETES
+================================================================================
+
+TYPE 1 DIABETES MELLITUS (T1DM):
+- Autoimmune destruction of pancreatic beta cells → absolute insulin deficiency.
+- Body's immune system attacks insulin-producing cells.
+- Requires lifelong insulin therapy.
+- Onset: Usually childhood or young adulthood (but can occur at any age).
+- Prevalence: ~5-10% of all diabetes cases.
+- Not preventable (autoimmune origin).
+- Risk factors: Genetic predisposition, possible viral triggers.
+- Formerly called "juvenile diabetes" or "insulin-dependent diabetes."
+
+TYPE 2 DIABETES MELLITUS (T2DM):
+- Progressive insulin resistance + relative insulin deficiency.
+- Most common form (90-95% of all diabetes).
+- Strong link to obesity, physical inactivity, diet, genetics.
+- Usually adult onset (but increasingly in young adults and adolescents).
+- Initially treatable with lifestyle + oral medications; may eventually require insulin.
+- Preventable and reversible in early stages with lifestyle modification.
+- Risk factors: Obesity, family history, physical inactivity, poor diet, age > 45, gestational diabetes history.
+
+GESTATIONAL DIABETES MELLITUS (GDM):
+- Diabetes diagnosed during pregnancy (usually 2nd or 3rd trimester).
+- Results from pregnancy hormones causing insulin resistance.
+- Affects 7-10% of pregnancies.
+- Usually resolves after delivery.
+- Increases risk of developing Type 2 Diabetes later in life.
+- Risks for baby: Macrosomia (large baby), neonatal hypoglycemia, preterm birth.
+- Screening: OGTT (75g or 100g) at 24-28 weeks gestation.
+
+OTHER SPECIFIC TYPES:
+- MODY (Maturity-Onset Diabetes of the Young): Genetic forms of diabetes.
+- Latent Autoimmune Diabetes in Adults (LADA): Slow-onset T1DM in adults (Type 1.5).
+- Secondary diabetes: From pancreatitis, Cushing's syndrome, acromegaly, medications (steroids).
+
+================================================================================
+SECTION 3: SYMPTOMS OF DIABETES
+================================================================================
+
+CLASSIC SYMPTOMS ("3 Polys" + 1):
+1. POLYURIA: Frequent, excessive urination (due to glucose spilling in urine, drawing water with it - osmotic diuresis).
+2. POLYDIPSIA: Excessive thirst (due to dehydration from polyuria).
+3. POLYPHAGIA: Excessive hunger (cells can't use glucose, brain signals hunger).
+4. UNEXPLAINED WEIGHT LOSS: Despite eating more (especially in Type 1 - body burns fat and muscle for energy).
+
+ADDITIONAL SYMPTOMS:
+- Fatigue and weakness (cells not getting glucose for energy)
+- Blurred vision (high glucose changes lens shape)
+- Slow-healing wounds (especially on feet)
+- Frequent infections (bacterial, fungal) - urinary tract, skin, yeast infections
+- Tingling or numbness in hands and feet (early neuropathy)
+- Dry, itchy skin
+- Dark velvety skin patches in armpits, neck, groin (Acanthosis Nigricans - sign of insulin resistance)
+- Erectile dysfunction in men
+- Recurrent vaginal infections in women
+
+SYMPTOMS IN TYPE 1 (Rapid Onset):
+- Above symptoms develop quickly (days to weeks).
+- May present with Diabetic Ketoacidosis (DKA) as first manifestation:
+  * Nausea, vomiting, severe abdominal pain.
+  * Fruity breath (acetone).
+  * Deep, rapid breathing (Kussmaul breathing).
+  * Confusion, loss of consciousness.
+  * MEDICAL EMERGENCY.
+
+SYMPTOMS IN TYPE 2 (Often Silent):
+- Many people have T2DM for years without symptoms.
+- Often diagnosed on routine screening.
+- May first present with complications (vision loss, kidney disease, heart attack).
+
+================================================================================
+SECTION 4: COMPLICATIONS OF DIABETES
+================================================================================
+
+ACUTE COMPLICATIONS:
+
+1. DIABETIC KETOACIDOSIS (DKA):
+   - Mainly Type 1. Triggered by: infection, missed insulin, surgery.
+   - Blood glucose typically > 250 mg/dL + ketones + acidosis (pH < 7.3).
+   - Symptoms: Nausea, vomiting, abdominal pain, rapid breathing, fruity odor.
+   - Treatment: IV fluids, insulin infusion, electrolyte replacement (especially potassium).
+   - MEDICAL EMERGENCY - can be fatal.
+
+2. HYPEROSMOLAR HYPERGLYCEMIC STATE (HHS):
+   - Mainly Type 2. Extreme hyperglycemia (often > 600 mg/dL) without significant ketosis.
+   - Severe dehydration, altered consciousness.
+   - MEDICAL EMERGENCY.
+
+3. HYPOGLYCEMIA (Low Blood Sugar):
+   - Blood glucose < 70 mg/dL.
+   - Causes: Too much insulin/medication, missed meal, excessive exercise.
+   - Symptoms: Sweating, shaking, anxiety, hunger, palpitations (mild).
+   - Severe: Confusion, seizures, unconsciousness.
+   - Treatment: "15-15 Rule" - 15g of fast-acting carbohydrates, recheck in 15 minutes.
+   - Fast-acting carbs: 3-4 glucose tablets, 4 oz fruit juice, regular (not diet) soda.
+   - Severe/unconscious: IV dextrose (D50) or glucagon injection.
+
+CHRONIC COMPLICATIONS (Long-term, from Chronic Hyperglycemia):
+
+MICROVASCULAR (Small Blood Vessel Disease):
+1. DIABETIC RETINOPATHY (Eye):
+   - Damage to blood vessels in retina.
+   - Leading cause of adult blindness in working-age population.
+   - Stages: Background → Pre-proliferative → Proliferative.
+   - Symptoms: Blurred vision, floaters, sudden vision loss.
+   - Screening: Annual dilated eye exam.
+   - Treatment: Laser photocoagulation, anti-VEGF injections, vitrectomy.
+
+2. DIABETIC NEPHROPATHY (Kidney):
+   - Damage to kidney filtering units (glomeruli).
+   - Leading cause of end-stage renal disease (dialysis).
+   - Signs: Microalbuminuria → Macroalbuminuria → Declining GFR → Kidney failure.
+   - Screening: Annual urine albumin-to-creatinine ratio (UACR) and eGFR.
+   - Treatment: ACE inhibitors, ARBs, SGLT2 inhibitors, blood pressure control.
+
+3. DIABETIC NEUROPATHY (Nerves):
+   - Most common complication of diabetes.
+   - Types:
+     * Peripheral: Numbness, tingling, burning in feet and hands ("glove and stocking" pattern).
+     * Autonomic: Affects heart rate, blood pressure, digestion, bladder, sexual function.
+     * Focal/Mononeuropathy: Sudden weakness of one nerve.
+   - Treatment: Good glucose control, pain medications (gabapentin, pregabalin, duloxetine).
+   - Diabetic foot care is critical to prevent ulcers and amputation.
+
+MACROVASCULAR (Large Blood Vessel Disease):
+1. CORONARY ARTERY DISEASE (Heart):
+   - Diabetics have 2-4x higher risk of heart attack.
+   - Heart disease is the leading cause of death in diabetics.
+   - May be "silent" (no chest pain due to autonomic neuropathy).
+
+2. STROKE:
+   - Diabetics have 2-4x higher risk of stroke.
+
+3. PERIPHERAL ARTERIAL DISEASE (Legs):
+   - Reduced blood flow to legs.
+   - Causes: Leg pain when walking (claudication), poor wound healing, gangrene.
+   - Contributes significantly to lower limb amputations.
+
+DIABETIC FOOT:
+- Combination of neuropathy (no pain sensation) + poor circulation + infection.
+- Small cuts, blisters, calluses → unnoticed → infected ulcers → osteomyelitis → amputation.
+- PREVENTION: Daily foot inspection, proper footwear, no barefoot walking, podiatrist visits.
+
+================================================================================
+SECTION 5: TREATMENT AND MANAGEMENT OF DIABETES
+================================================================================
+
+TREATMENT GOALS:
+- HbA1c: < 7% for most diabetics (lower for young, higher for elderly/frail).
+- Fasting glucose: 80-130 mg/dL.
+- Post-meal glucose: < 180 mg/dL.
+- Blood pressure: < 130/80 mmHg.
+- LDL cholesterol: < 70 mg/dL (< 55 mg/dL in very high cardiovascular risk).
+
+A. LIFESTYLE MANAGEMENT (Foundation of Treatment):
+
+MEDICAL NUTRITION THERAPY (Diet):
+- Carbohydrates: Focus on quality (whole grains, vegetables, legumes) over quantity.
+- Limit: Refined carbohydrates (white rice, white bread, sugary drinks), saturated fat, sodium.
+- Increase: Fiber (slows glucose absorption), lean protein, healthy fats.
+- The "Plate Method": Half plate non-starchy vegetables, quarter lean protein, quarter whole grains.
+- Calorie restriction for overweight/obese T2DM patients.
+- Alcohol: In moderation only; never drink on empty stomach (hypoglycemia risk).
+
+PHYSICAL ACTIVITY:
+- 150 minutes/week of moderate aerobic exercise (brisk walking, cycling, swimming).
+- Resistance training 2-3 times/week.
+- Breaks sedentary time every 30 minutes.
+- Exercise lowers blood glucose by increasing insulin sensitivity.
+- Caution: Check blood glucose before exercise if on insulin.
+
+WEIGHT MANAGEMENT:
+- Even 5-10% weight loss significantly improves blood sugar control in T2DM.
+- Bariatric surgery: For BMI > 35 with uncontrolled T2DM; can achieve remission.
+
+SMOKING CESSATION:
+- Smoking worsens cardiovascular risk, increases complications.
+
+B. ORAL MEDICATIONS (Type 2 Diabetes):
+
+1. METFORMIN (First-line):
+   - Mechanism: Reduces glucose production in liver (hepatic gluconeogenesis).
+   - Also improves insulin sensitivity.
+   - Does not cause weight gain or hypoglycemia.
+   - Cardiovascular protective effects.
+   - Side effects: GI upset (nausea, diarrhea) - take with food; reduce with extended-release form.
+   - Contraindications: eGFR < 30 mL/min, IV contrast dye use, severe liver disease, alcoholism.
+   - Rarely: Lactic acidosis (serious but very rare).
+
+2. SGLT2 INHIBITORS (Sodium-Glucose Co-transporter 2):
+   - Drugs: Empagliflozin (Jardiance), Dapagliflozin (Farxiga), Canagliflozin (Invokana).
+   - Mechanism: Block glucose reabsorption in kidneys → glucose excreted in urine.
+   - Additional benefits: Reduce weight, blood pressure, cardiovascular events, kidney disease progression.
+   - Side effects: Urinary tract infections, genital fungal infections, DKA (rare).
+
+3. GLP-1 RECEPTOR AGONISTS:
+   - Drugs: Semaglutide (Ozempic - injectable, Rybelsus - oral), Liraglutide (Victoza), Dulaglutide (Trulicity).
+   - Mechanism: Stimulate insulin secretion, suppress glucagon, slow gastric emptying, suppress appetite.
+   - Major benefits: Weight loss (significant), cardiovascular risk reduction.
+   - Side effects: Nausea, vomiting (usually transient), pancreatitis (rare).
+
+4. DPP-4 INHIBITORS (Gliptins):
+   - Drugs: Sitagliptin (Januvia), Saxagliptin, Vildagliptin, Teneligliptin.
+   - Mechanism: Inhibit DPP-4 enzyme → more GLP-1 available → more insulin.
+   - Weight neutral. Kidney-safe (dose adjust in CKD).
+   - Side effects: Nasopharyngitis, pancreatitis (rare), heart failure risk (saxagliptin).
+
+5. SULFONYLUREAS:
+   - Drugs: Glibenclamide, Glipizide, Glimepiride, Gliclazide.
+   - Mechanism: Stimulate insulin secretion from beta cells (regardless of glucose level).
+   - Risk of hypoglycemia. Weight gain.
+   - Cheap and effective but older class.
+
+6. THIAZOLIDINEDIONES (TZDs / Glitazones):
+   - Drugs: Pioglitazone.
+   - Mechanism: Increase insulin sensitivity in peripheral tissues.
+   - Reduces liver fat, may help NAFLD.
+   - Side effects: Weight gain, fluid retention, heart failure risk, fractures, bladder cancer risk.
+
+7. ALPHA-GLUCOSIDASE INHIBITORS:
+   - Drugs: Acarbose, Voglibose.
+   - Mechanism: Slow carbohydrate digestion → reduce post-meal glucose spikes.
+   - Must take with first bite of each meal.
+   - Side effects: Flatulence, diarrhea, abdominal bloating.
+
+C. INSULIN THERAPY:
+
+TYPES OF INSULIN:
+1. Rapid-Acting: Lispro (Humalog), Aspart (NovoLog), Glulisine. Onset: 15 min. Peak: 1-2 hrs. Duration: 3-5 hrs.
+2. Short-Acting (Regular): Onset: 30-60 min. Peak: 2-4 hrs. Duration: 5-8 hrs. (Used IV in hospital).
+3. Intermediate-Acting (NPH): Onset: 2-4 hrs. Duration: 12-18 hrs.
+4. Long-Acting: Glargine (Lantus), Detemir (Levemir), Degludec (Tresiba). Duration: 20-24+ hrs. No peak.
+5. Pre-Mixed: Combination of short + intermediate acting.
+
+INSULIN REGIMENS:
+- Basal only: One injection of long-acting insulin daily (for T2DM starting insulin).
+- Basal-Bolus: Long-acting once daily + rapid-acting with each meal (for T1DM and advanced T2DM).
+- Insulin pump (CSII): Continuous subcutaneous insulin infusion. For T1DM.
+
+INSULIN INJECTION SITES: Abdomen (fastest absorption), thigh (slowest), upper arm, buttocks.
+
+================================================================================
+SECTION 6: MONITORING DIABETES
+================================================================================
+
+SELF-MONITORING OF BLOOD GLUCOSE (SMBG):
+- Using a glucometer at home.
+- Type 1: Test before meals and bedtime; more frequently during illness, exercise changes.
+- Type 2 on insulin: Test before meals and bedtime.
+- Type 2 on oral meds: As advised by doctor.
+
+CONTINUOUS GLUCOSE MONITORING (CGM):
+- Sensor inserted under skin measures glucose every 1-5 minutes.
+- Devices: FreeStyle Libre (Abbott), Dexterity (Dexcom), Medtronic.
+- Time-in-Range (TIR): Goal > 70% of readings between 70-180 mg/dL.
+
+HbA1c:
+- Reflects average blood glucose over past 2-3 months.
+- Check every 3 months initially, then every 6 months when stable.
+- Target: < 7% for most patients.
+- A1c of 7% corresponds to average glucose of ~154 mg/dL.
+
+URINE KETONES:
+- Test during illness or if blood glucose > 250 mg/dL (especially T1DM).
+
+================================================================================
+SECTION 7: PRECAUTIONS FOR DIABETICS
+================================================================================
+
+DIET PRECAUTIONS:
+1. Never skip meals (especially if on insulin or sulfonylureas - hypoglycemia risk).
+2. Count carbohydrates carefully.
+3. Avoid sugar-sweetened beverages, fruit juices, candy.
+4. Use sugar alternatives (stevia, sucralose) in moderation.
+5. Read food labels carefully - watch for hidden sugars.
+6. Limit sodium to < 2300 mg/day (blood pressure control).
+7. When eating out: Choose grilled over fried; choose whole grain options; ask for dressings on the side.
+
+FOOT CARE PRECAUTIONS (Critical):
+1. Inspect feet daily for cuts, blisters, redness, swelling, sores.
+2. Wash feet daily in lukewarm water; dry completely between toes.
+3. Moisturize feet (but NOT between toes).
+4. NEVER walk barefoot - indoors or outdoors.
+5. Trim toenails straight across; file edges.
+6. Wear well-fitting shoes; check inside shoes for objects before wearing.
+7. Wear comfortable cotton/wool socks without tight elastic.
+8. Do not use heating pads/hot water bottles (burn risk due to neuropathy).
+9. See a podiatrist regularly.
+10. Report any foot wound to doctor immediately - even small ones.
+
+SICK DAY RULES:
+1. Never stop insulin during illness (need may increase).
+2. Continue oral medications (unless instructed otherwise).
+3. Monitor blood glucose every 2-4 hours.
+4. Check urine or blood ketones frequently.
+5. Stay hydrated (sip fluids every 15-30 minutes).
+6. Eat soft, bland foods if can't eat normally.
+7. Contact doctor if: Blood glucose > 300 mg/dL, ketones positive, can't keep fluids down, confused.
+
+EXERCISE PRECAUTIONS:
+1. Check blood glucose before exercise.
+2. If < 100 mg/dL, eat a small snack before exercising.
+3. Carry fast-acting sugar (glucose tablets, juice) during exercise.
+4. Avoid exercise if blood glucose > 250 mg/dL with ketones.
+5. Wear proper footwear.
+6. Stay hydrated.
+
+TRAVEL PRECAUTIONS:
+1. Carry twice the medication needed (in carry-on, NOT checked baggage).
+2. Keep insulin cool; do not freeze.
+3. Carry medical ID (bracelet or card) indicating diabetic.
+4. Carry snacks to prevent hypoglycemia.
+5. Time zone changes: Consult doctor about insulin timing.
+
+MEDICATION SAFETY:
+1. Medications that raise blood glucose: Steroids, thiazide diuretics, beta-blockers, antipsychotics, certain antiretrovirals.
+2. Medications that lower blood glucose (hypoglycemia risk with antidiabetics): Alcohol, aspirin (high dose), certain antibiotics.
+
+================================================================================
+SECTION 8: DIABETES AND SPECIAL SITUATIONS
+================================================================================
+
+DIABETES AND SURGERY:
+- Blood glucose must be well-controlled before elective surgery.
+- High glucose increases infection risk, delays wound healing.
+- Hold metformin 24-48 hours before surgery with contrast.
+- Continuous glucose monitoring during surgery.
+
+DIABETES AND PREGNANCY:
+- Pre-gestational diabetes requires tight control (HbA1c < 6.5% ideally before conception).
+- Increased risk of: Miscarriage, birth defects (especially neural tube, cardiac), pre-eclampsia, macrosomia.
+- Insulin is the only approved medication for glucose control in pregnancy (most oral drugs not safe).
+
+DIABETES AND RAMADAN FASTING:
+- Major risk of hypoglycemia during fasting, hyperglycemia after Iftar.
+- Consult doctor before Ramadan to adjust medications.
+- SGLT2 inhibitors: Increased DKA risk during fasting.
+- Many diabetics may safely fast with proper planning; some should not.
+
+DIABETES AND COVID-19:
+- Diabetics have higher risk of severe COVID-19 and complications.
+- COVID-19 can cause new-onset diabetes (damage to pancreas).
+- Uncontrolled glucose worsens COVID-19 outcomes.
+
+================================================================================
+END OF DOCUMENT: DIABETES MELLITUS CLINICAL GUIDE
+================================================================================

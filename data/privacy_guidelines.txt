@@ -1,0 +1,7 @@
+Healthcare Privacy and Data Guidelines
+
+The clinic follows HIPAA-aligned practices for handling protected health information (PHI).
+Staff should access only the minimum necessary patient information for their role.
+Patient records must not be shared through unsecured email or messaging channels.
+Patients can request a copy of their records after identity verification.
+Any suspected data breach should be reported to compliance staff within 24 hours.

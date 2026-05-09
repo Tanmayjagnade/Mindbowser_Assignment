@@ -1,0 +1,55 @@
+﻿APPOINTMENT SCHEDULING POLICY
+MedAssist Healthcare System
+Document Version: 2024-01
+
+PURPOSE
+This policy establishes guidelines for scheduling, confirming, cancelling, and rescheduling patient appointments at MedAssist Healthcare System facilities.
+
+SCHEDULING AN APPOINTMENT
+Patients may schedule appointments through the following channels:
+- Online: Patient portal at medassist.example.com/appointments (available 24/7)
+- Phone: Call 1800-MED-ASSIST, Monday to Friday 8:00 AM - 6:00 PM
+- In-person: Visit the registration desk at any MedAssist facility
+- Telehealth: Available for eligible visits via the online portal or mobile app
+
+New patients must register before scheduling. Registration requires a valid government-issued photo ID, insurance card (if applicable), and a completed New Patient Registration Form.
+
+APPOINTMENT TYPES
+- Routine/Preventive: Annual physicals, wellness visits, vaccinations (2-4 weeks advance booking recommended)
+- Follow-up: Post-hospitalization or specialist follow-up (typically within 7-14 days)
+- Urgent: Same-day or next-day slots for patients with acute non-emergency symptoms
+- Emergency: Walk-ins accepted; triaged immediately
+- Telehealth: Follow-up visits, minor illness consultations, medication reviews, and mental health check-ins
+
+APPOINTMENT CONFIRMATION
+All appointments confirmed by:
+- Automated SMS reminder 48 hours before appointment
+- Email confirmation sent immediately after scheduling
+- Phone call for high-priority or surgical appointments
+
+Patients should confirm or cancel at least 24 hours in advance.
+
+CANCELLATION POLICY
+- Appointments must be cancelled at least 24 hours in advance to avoid a cancellation fee.
+- A no-show fee of $25 may be applied for missed appointments without prior notice.
+- Three or more no-shows within 12 months may result in booking restrictions.
+- Emergency cancellations (illness, hospitalization) are exempt when documentation is provided.
+
+RESCHEDULING
+- Patients may reschedule up to 3 times per slot before a new booking is required.
+- Reschedule requests within 24 hours will be accommodated based on availability.
+
+WAIT TIMES
+- Routine appointments: Average 5-10 business days.
+- Specialist appointments: 1-3 weeks depending on specialty.
+- Urgent care slots: Available same day or next day.
+- Emergency walk-ins: Triaged within 15 minutes of arrival.
+
+LATE ARRIVAL POLICY
+Patients arriving more than 15 minutes late may be asked to reschedule.
+
+SPECIAL ACCOMMODATIONS
+Patients requiring wheelchair access, interpreter services, or other accommodations should notify the scheduling team at least 48 hours in advance. Interpreter services available for over 20 languages at no charge.
+
+CONTACT
+Appointment inquiries: 1800-MED-ASSIST or appointments@medassist.example.com

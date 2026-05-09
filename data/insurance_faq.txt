@@ -1,0 +1,40 @@
+﻿INSURANCE ELIGIBILITY AND COVERAGE FAQ
+MedAssist Healthcare System
+Document Version: 2024-01
+
+Q: What insurance plans does MedAssist accept?
+A: MedAssist accepts most major insurance plans including Medicare, Medicaid, Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, Humana, and many regional plans. Please call 1800-MED-ASSIST or check our website to verify your specific plan before your visit.
+
+Q: How do I verify my insurance eligibility before my appointment?
+A: You can verify eligibility by calling the Member Services number on your insurance card, logging into the MedAssist patient portal and entering your insurance details, or calling our Billing and Insurance department at 1800-MED-BILLING. Verification is recommended at least 48 hours before your visit.
+
+Q: What is a copayment?
+A: A copayment (copay) is a fixed amount you pay at the time of service. For example, a primary care visit may have a $25 copay. Specialist visits typically have higher copays. Check your insurance card or call your insurer for your specific copays.
+
+Q: What is a deductible?
+A: A deductible is the amount you must pay out-of-pocket before your insurance starts covering costs. For example, if your deductible is $1,000, you pay the first $1,000 in medical costs each year. After meeting your deductible, insurance shares the cost through co-insurance.
+
+Q: What is co-insurance?
+A: Co-insurance is the percentage of costs you pay after meeting your deductible. For example, an 80/20 plan means your insurer pays 80% and you pay 20% of covered services after the deductible is met.
+
+Q: What does out-of-pocket maximum mean?
+A: The out-of-pocket maximum is the most you will pay for covered services in a plan year. After reaching this limit, your insurance covers 100% of covered services for the rest of the year.
+
+Q: Does MedAssist offer financial assistance for uninsured patients?
+A: Yes. Uninsured patients may be eligible for the MedAssist Financial Assistance Program. Eligibility is based on household income relative to the Federal Poverty Level (FPL). Applications are available at the registration desk or at medassist.example.com/financial-assistance.
+
+Q: What is a referral and when do I need one?
+A: Some insurance plans (typically HMO plans) require a referral from your primary care physician before seeing a specialist. Contact your insurer or your PCP's office to determine if a referral is required. MedAssist can assist with the referral process.
+
+Q: Are lab tests and imaging covered under my plan?
+A: Coverage for lab tests, X-rays, MRI, CT scans, and other imaging varies by plan. Many plans require that services be performed at in-network facilities to receive full coverage. Always confirm with your insurer before scheduling diagnostic procedures.
+
+Q: What should I bring to my appointment regarding insurance?
+A: Please bring your current insurance card, photo ID, and any referral paperwork from your PCP. If your insurance has changed recently, bring the new insurance card.
+
+Q: Can I update my insurance information after my visit?
+A: Yes, you may update insurance information within 30 days of your visit by contacting our Billing department. After 30 days, retroactive billing adjustments may not be possible.
+
+BILLING CONTACT
+MedAssist Billing Department: 1800-MED-BILLING
+Billing inquiries portal: medassist.example.com/billing

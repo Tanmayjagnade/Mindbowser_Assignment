@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>MindCare AI — Intelligent Clinical Assistant by Mindbowser</title>
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+:root{
+  --brand:#5c4fff;--brand2:#7c3aed;--brand-light:#ede9fe;
+  --teal:#06b6d4;--green:#10b981;--red:#ef4444;--amber:#f59e0b;
+  --bg:#f8fafc;--sidebar:#ffffff;--chat:#ffffff;
+  --border:#e2e8f0;--text:#0f172a;--muted:#64748b;--light:#f1f5f9;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);height:100vh;overflow:hidden;color:var(--text);}
+
+/* ── HEADER ── */
+.header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 24px;height:58px;
+  background:linear-gradient(135deg,#5c4fff 0%,#7c3aed 50%,#06b6d4 100%);
+  box-shadow:0 2px 12px rgba(92,79,255,.35);
+}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;}
+.logo-icon{width:34px;height:34px;background:rgba(255,255,255,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;}
+.logo-name{font-size:1.15rem;font-weight:800;letter-spacing:-.3px;}
+.logo-by{font-size:.7rem;opacity:.8;font-weight:400;margin-top:-2px;}
+.header-right{display:flex;align-items:center;gap:12px;}
+.status-badge{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border-radius:20px;padding:5px 12px;font-size:.75rem;color:#fff;}
+.dot{width:7px;height:7px;border-radius:50%;}
+.dot.green{background:#34d399;box-shadow:0 0 6px #34d399;}
+.dot.red{background:#f87171;}
+.btn-icon{background:rgba(255,255,255,.15);border:none;border-radius:8px;color:#fff;width:32px;height:32px;cursor:pointer;font-size:.85rem;display:flex;align-items:center;justify-content:center;transition:background .2s;}
+.btn-icon:hover{background:rgba(255,255,255,.3);}
+
+/* ── LAYOUT ── */
+.layout{display:flex;height:calc(100vh - 58px);}
+
+/* ── SIDEBAR ── */
+.sidebar{width:280px;background:var(--sidebar);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;}
+.sidebar-section{padding:14px 16px;border-bottom:1px solid var(--border);}
+.section-label{font-size:.68rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;}
+
+/* Upload zone */
+.upload-zone{border:2px dashed #c4b5fd;border-radius:12px;padding:16px;text-align:center;cursor:pointer;transition:all .2s;background:#faf5ff;}
+.upload-zone:hover,.upload-zone.drag{border-color:var(--brand);background:var(--brand-light);}
+.upload-zone input{display:none;}
+.upload-icon{font-size:1.4rem;color:#8b5cf6;margin-bottom:6px;}
+.upload-text{font-size:.75rem;color:var(--muted);}
+.upload-text strong{color:var(--brand);cursor:pointer;}
+
+/* Progress bar */
+.progress-wrap{margin-top:8px;display:none;}
+.progress-wrap.show{display:block;}
+.progress-bar{height:4px;background:#e2e8f0;border-radius:2px;overflow:hidden;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--brand),var(--teal));border-radius:2px;animation:progress .8s ease-in-out infinite alternate;}
+@keyframes progress{from{width:20%}to{width:90%}}
+
+/* Document list */
+.doc-list{flex:1;overflow-y:auto;padding:8px 16px;display:flex;flex-direction:column;gap:6px;}
+.doc-card{background:var(--light);border:1px solid var(--border);border-radius:10px;padding:10px 12px;cursor:pointer;transition:all .2s;}
+.doc-card:hover{border-color:#c4b5fd;background:var(--brand-light);}
+.doc-card.expanded{border-color:var(--brand);}
+.doc-top{display:flex;align-items:center;gap:8px;}
+.doc-icon{color:#8b5cf6;font-size:.9rem;flex-shrink:0;}
+.doc-name{font-size:.78rem;font-weight:600;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.doc-chunks{font-size:.68rem;color:var(--muted);background:#e2e8f0;border-radius:10px;padding:2px 7px;flex-shrink:0;}
+.doc-chevron{font-size:.6rem;color:var(--muted);transition:transform .2s;}
+.doc-card.expanded .doc-chevron{transform:rotate(180deg);}
+.chunk-preview{margin-top:8px;display:none;}
+.doc-card.expanded .chunk-preview{display:block;}
+.chunk-item{background:#fff;border:1px solid #e2e8f0;border-radius:6px;padding:6px 8px;margin-bottom:4px;font-size:.68rem;color:#475569;line-height:1.5;}
+.chunk-num{font-weight:700;color:var(--brand);margin-bottom:2px;}
+
+/* System info */
+.sys-info{padding:12px 16px;border-top:1px solid var(--border);background:#fafafa;}
+.sys-row{display:flex;justify-content:space-between;font-size:.72rem;margin-bottom:4px;}
+.sys-label{color:var(--muted);}
+.sys-val{font-weight:600;color:var(--text);}
+.sys-val.green{color:var(--green);}
+
+/* ── CHAT AREA ── */
+.chat-area{flex:1;display:flex;flex-direction:column;overflow:hidden;background:var(--chat);}
+
+.messages{flex:1;overflow-y:auto;padding:28px 40px;display:flex;flex-direction:column;gap:20px;}
+
+/* Welcome state */
+.welcome-wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:40px;}
+.welcome-logo{width:72px;height:72px;background:linear-gradient(135deg,#5c4fff,#06b6d4);border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#fff;box-shadow:0 8px 24px rgba(92,79,255,.3);}
+.welcome-title{font-size:1.6rem;font-weight:800;background:linear-gradient(135deg,#5c4fff,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.welcome-sub{font-size:.9rem;color:var(--muted);text-align:center;max-width:420px;line-height:1.6;}
+.suggestion-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;width:100%;max-width:520px;}
+.sug-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px 16px;cursor:pointer;transition:all .2s;text-align:left;}
+.sug-card:hover{border-color:var(--brand);box-shadow:0 4px 14px rgba(92,79,255,.12);transform:translateY(-2px);}
+.sug-card-icon{font-size:1.1rem;margin-bottom:6px;}
+.sug-card-text{font-size:.78rem;color:#334155;line-height:1.4;font-weight:500;}
+
+/* Message bubbles */
+.msg{display:flex;gap:12px;animation:fadeUp .25s ease;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.msg.user{flex-direction:row-reverse;}
+.avatar{width:36px;height:36px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0;}
+.avatar.user{background:linear-gradient(135deg,#5c4fff,#7c3aed);color:#fff;}
+.avatar.bot{background:linear-gradient(135deg,#06b6d4,#10b981);color:#fff;}
+.bubble{max-width:78%;padding:14px 18px;border-radius:18px;font-size:.875rem;line-height:1.7;}
+.bubble.user{background:linear-gradient(135deg,#5c4fff,#7c3aed);color:#fff;border-bottom-right-radius:4px;}
+.bubble.bot{background:#f8fafc;border:1px solid var(--border);color:var(--text);border-bottom-left-radius:4px;}
+
+/* Meta row */
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.badge{font-size:.65rem;padding:3px 9px;border-radius:10px;font-weight:700;display:flex;align-items:center;gap:4px;}
+.badge.high{background:#dcfce7;color:#166534;}
+.badge.medium{background:#fef3c7;color:#92400e;}
+.badge.low,.badge.none{background:#fee2e2;color:#991b1b;}
+.badge.appt{background:#ede9fe;color:#5b21b6;}
+.badge.rag{background:#e0f2fe;color:#0369a1;}
+.badge.guard{background:#fee2e2;color:#991b1b;}
+.badge.greet{background:#dcfce7;color:#166534;}
+
+/* Slot chips */
+.slots{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+.slot{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:4px 12px;font-size:.75rem;color:#166534;font-weight:600;}
+
+/* Sources */
+.sources{margin-top:12px;}
+.src-label{font-size:.68rem;font-weight:700;color:var(--muted);margin-bottom:6px;text-transform:uppercase;}
+.src-item{background:#fff;border:1px solid var(--border);border-radius:8px;padding:8px 12px;margin-bottom:5px;font-size:.72rem;}
+.src-doc{font-weight:700;color:var(--brand);margin-bottom:3px;display:flex;align-items:center;gap:5px;}
+.src-text{color:#475569;line-height:1.5;}
+
+/* Typing */
+.typing-wrap{display:flex;align-items:center;gap:6px;padding:8px 0;}
+.typing-dot{width:7px;height:7px;background:#94a3b8;border-radius:50%;animation:bounce 1.2s infinite;}
+.typing-dot:nth-child(2){animation-delay:.2s;}
+.typing-dot:nth-child(3){animation-delay:.4s;}
+@keyframes bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-7px)}}
+
+/* ── INPUT BAR ── */
+.input-section{border-top:1px solid var(--border);padding:12px 40px 18px;background:#fff;}
+.chip-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
+.chip{background:var(--light);border:1px solid var(--border);border-radius:20px;padding:5px 12px;font-size:.72rem;color:#475569;cursor:pointer;transition:all .15s;white-space:nowrap;}
+.chip:hover{background:var(--brand-light);border-color:#c4b5fd;color:var(--brand);}
+.input-row{display:flex;gap:10px;align-items:flex-end;}
+.input-box{flex:1;border:1.5px solid var(--border);border-radius:14px;padding:12px 16px;font-size:.9rem;font-family:inherit;resize:none;outline:none;max-height:130px;line-height:1.5;transition:border-color .2s;background:#fafafa;}
+.input-box:focus{border-color:var(--brand);background:#fff;}
+.send-btn{width:44px;height:44px;border-radius:12px;border:none;background:linear-gradient(135deg,#5c4fff,#7c3aed);color:#fff;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0;box-shadow:0 4px 12px rgba(92,79,255,.35);}
+.send-btn:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 6px 16px rgba(92,79,255,.4);}
+.send-btn:disabled{background:#e2e8f0;box-shadow:none;cursor:not-allowed;color:#94a3b8;}
+.input-hint{font-size:.68rem;color:var(--muted);margin-top:6px;text-align:center;}
+
+/* Ingest btn */
+.ingest-btn{width:100%;padding:9px;border-radius:8px;border:1.5px dashed #c4b5fd;background:transparent;color:var(--brand);font-size:.75rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;transition:all .2s;margin-top:8px;}
+.ingest-btn:hover:not(:disabled){background:var(--brand-light);}
+.ingest-btn:disabled{opacity:.5;cursor:not-allowed;}
+
+/* Toast */
+.toast{position:fixed;bottom:24px;right:24px;border-radius:10px;padding:12px 20px;font-size:.8rem;color:#fff;z-index:9999;animation:fadeIn .3s ease;max-width:320px;display:flex;align-items:center;gap:10px;box-shadow:0 8px 24px rgba(0,0,0,.15);}
+.toast.success{background:#065f46;}
+.toast.error{background:#991b1b;}
+.toast.info{background:#1e40af;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px;}
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+const {useState,useEffect,useRef,useCallback} = React;
+const API = '';
+
+const CHIPS = [
+  "What are my HIPAA rights?",
+  "How to request medication refill?",
+  "Telehealth consultation process",
+  "Book cardiology for Monday",
+  "Diet after hospital discharge",
+  "Insurance eligibility FAQ",
+];
+
+const WELCOME_CARDS = [
+  {icon:"🏥",text:"What are patient rights under HIPAA privacy guidelines?"},
+  {icon:"💊",text:"How do I request a medication refill through the portal?"},
+  {icon:"📅",text:"Book a cardiology appointment for Monday morning"},
+  {icon:"🖥️",text:"Can I get a telehealth consultation for a follow-up visit?"},
+];
+
+/* ─── helpers ─── */
+function ConfBadge({level}){
+  return <span className={`badge ${level}`}><i className="fa fa-circle-dot"/> {level} confidence</span>;
+}
+function IntentBadge({intent}){
+  if(intent==='appointment_booking') return <span className="badge appt"><i className="fa fa-calendar-check"/> Appointment</span>;
+  if(intent==='out_of_scope')       return <span className="badge guard"><i className="fa fa-shield-halved"/> Guardrail</span>;
+  if(intent==='greeting')           return <span className="badge greet"><i className="fa fa-hand-wave"/> Greeting</span>;
+  return <span className="badge rag"><i className="fa fa-database"/> RAG</span>;
+}
+
+/* ─── document card ─── */
+function DocCard({doc}){
+  const [open,setOpen]=useState(false);
+  const icon = doc.filename.endsWith('.pdf') ? 'fa-file-pdf' : 'fa-file-lines';
+  return(
+    <div className={`doc-card ${open?'expanded':''}`} onClick={()=>setOpen(!open)}>
+      <div className="doc-top">
+        <i className={`doc-icon fa ${icon}`}/>
+        <span className="doc-name" title={doc.filename}>{doc.filename}</span>
+        <span className="doc-chunks">{doc.chunks}</span>
+        <i className="doc-chevron fa fa-chevron-down"/>
+      </div>
+      {open && doc.sample_chunks && (
+        <div className="chunk-preview">
+          {doc.sample_chunks.slice(0,3).map((c,i)=>(
+            <div className="chunk-item" key={i}>
+              <div className="chunk-num">Chunk #{c.index+1}</div>
+              {c.text.slice(0,180)}{c.text.length>180?'…':''}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ─── message ─── */
+function Message({msg}){
+  if(msg.role==='user') return(
+    <div className="msg user">
+      <div className="avatar user"><i className="fa fa-user"/></div>
+      <div className="bubble user">{msg.text}</div>
+    </div>
+  );
+  if(msg.typing) return(
+    <div className="msg bot">
+      <div className="avatar bot"><i className="fa fa-heart-pulse"/></div>
+      <div className="bubble bot">
+        <div className="typing-wrap">
+          <div className="typing-dot"/><div className="typing-dot"/><div className="typing-dot"/>
+        </div>
+      </div>
+    </div>
+  );
+  const {answer,sources,confidence,intent,tool_result}=msg.data||{};
+  return(
+    <div className="msg bot">
+      <div className="avatar bot"><i className="fa fa-heart-pulse"/></div>
+      <div className="bubble bot" style={{maxWidth:'82%'}}>
+        <div style={{whiteSpace:'pre-wrap',lineHeight:1.7}}>{answer}</div>
+        {tool_result?.available_slots &&(
+          <div>
+            <div className="src-label" style={{marginTop:10}}>Available Slots — {tool_result.department}</div>
+            <div className="slots">{tool_result.available_slots.map((s,i)=><span className="slot" key={i}>{s}</span>)}</div>
+          </div>
+        )}
+        {sources?.length>0 &&(
+          <div className="sources">
+            <div className="src-label"><i className="fa fa-book-medical"/> Sources</div>
+            {sources.map((s,i)=>(
+              <div className="src-item" key={i}>
+                <div className="src-doc"><i className="fa fa-file-waveform"/>{s.document}</div>
+                <div className="src-text">{s.chunk}</div>
+              </div>
+            ))}
+          </div>
+        )}
+        <div className="meta">
+          {confidence && <ConfBadge level={confidence}/>}
+          {intent && <IntentBadge intent={intent}/>}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─── main app ─── */
+function App(){
+  const [msgs,setMsgs]         = useState([]);
+  const [input,setInput]       = useState('');
+  const [loading,setLoading]   = useState(false);
+  const [health,setHealth]     = useState(null);
+  const [docs,setDocs]         = useState([]);
+  const [uploading,setUploading]= useState(false);
+  const [ingesting,setIngesting]= useState(false);
+  const [toast,setToast]       = useState(null);
+  const [dragOver,setDragOver] = useState(false);
+  const endRef   = useRef(null);
+  const fileRef  = useRef(null);
+  const taRef    = useRef(null);
+
+  const showToast=(msg,type='info')=>{
+    setToast({msg,type});
+    setTimeout(()=>setToast(null),4000);
+  };
+
+  const fetchHealth=useCallback(async()=>{
+    try{const r=await fetch(`${API}/health`);setHealth(await r.json());}
+    catch{setHealth(null);}
+  },[]);
+
+  const fetchDocs=useCallback(async()=>{
+    try{const r=await fetch(`${API}/documents`);const d=await r.json();setDocs(d.documents||[]);}
+    catch{}
+  },[]);
+
+  useEffect(()=>{
+    fetchHealth();fetchDocs();
+    const id=setInterval(()=>{fetchHealth();},20000);
+    return()=>clearInterval(id);
+  },[fetchHealth,fetchDocs]);
+
+  useEffect(()=>{endRef.current?.scrollIntoView({behavior:'smooth'});},[msgs]);
+
+  /* upload */
+  const handleFiles=async(files)=>{
+    if(!files||files.length===0) return;
+    const file=files[0];
+    const ok=['.txt','.pdf','.md'];
+    const ext='.'+file.name.split('.').pop().toLowerCase();
+    if(!ok.includes(ext)){showToast(`Only .txt .pdf .md supported`,'error');return;}
+
+    setUploading(true);
+    showToast(`Uploading "${file.name}"…`,'info');
+    const form=new FormData();
+    form.append('file',file);
+    try{
+      const r=await fetch(`${API}/upload`,{method:'POST',body:form});
+      const d=await r.json();
+      if(d.status==='success'){
+        showToast(`✅ ${d.filename} — ${d.chunks_created} chunks indexed`,'success');
+        // Add to docs list with chunk preview
+        setDocs(prev=>{
+          const filtered=prev.filter(x=>x.filename!==d.filename);
+          return [{filename:d.filename,chunks:d.chunks_created,sample_chunks:d.sample_chunks},...filtered];
+        });
+        fetchHealth();
+      } else {
+        showToast(d.detail||'Upload failed','error');
+      }
+    }catch(e){showToast(`Upload error: ${e.message}`,'error');}
+    finally{setUploading(false);}
+  };
+
+  const handleDrop=e=>{
+    e.preventDefault();setDragOver(false);
+    handleFiles(e.dataTransfer.files);
+  };
+
+  /* ingest from folder */
+  const handleIngest=async()=>{
+    setIngesting(true);
+    try{
+      const r=await fetch(`${API}/ingest`,{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});
+      const d=await r.json();
+      if(d.status==='success'){
+        showToast(`✅ ${d.documents_processed} docs, ${d.chunks_created} chunks indexed`,'success');
+        fetchDocs();fetchHealth();
+      }
+    }catch(e){showToast(`Error: ${e.message}`,'error');}
+    finally{setIngesting(false);}
+  };
+
+  /* send message */
+  const send=async(text)=>{
+    const q=(text||input).trim();
+    if(!q||loading) return;
+    setInput('');
+    setMsgs(m=>[...m,{role:'user',text:q}]);
+    setMsgs(m=>[...m,{role:'bot',typing:true}]);
+    setLoading(true);
+    try{
+      const r=await fetch(`${API}/ask`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q})});
+      const d=await r.json();
+      setMsgs(m=>{const u=[...m];u[u.length-1]={role:'bot',data:d};return u;});
+    }catch(e){
+      setMsgs(m=>{const u=[...m];u[u.length-1]={role:'bot',data:{answer:`⚠️ ${e.message}`,sources:[],confidence:'none'}};return u;});
+    }finally{setLoading(false);}
+  };
+
+  const onKey=e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send();}};
+
+  const dotClass=health?(health.status==='healthy'?'green':'red'):'red';
+
+  return(
+    <div style={{display:'flex',flexDirection:'column',height:'100vh'}}>
+
+      {/* HEADER */}
+      <div className="header">
+        <div className="logo">
+          <div className="logo-icon"><i className="fa fa-brain"/></div>
+          <div>
+            <div className="logo-name">MindCare AI</div>
+            <div className="logo-by">by Mindbowser — Clinical Intelligence Assistant</div>
+          </div>
+        </div>
+        <div className="header-right">
+          <div className="status-badge">
+            <div className={`dot ${dotClass}`}/>
+            {health?`${health.chunks_indexed} docs indexed`:'Connecting…'}
+          </div>
+          <button className="btn-icon" title="Clear chat" onClick={()=>setMsgs([])}>
+            <i className="fa fa-broom"/>
+          </button>
+          <button className="btn-icon" title="API Docs" onClick={()=>window.open('/docs','_blank')}>
+            <i className="fa fa-code"/>
+          </button>
+        </div>
+      </div>
+
+      <div className="layout">
+
+        {/* SIDEBAR */}
+        <div className="sidebar">
+
+          {/* Upload */}
+          <div className="sidebar-section">
+            <div className="section-label"><i className="fa fa-upload"/> Upload Document</div>
+            <div
+              className={`upload-zone ${dragOver?'drag':''}`}
+              onClick={()=>fileRef.current?.click()}
+              onDragOver={e=>{e.preventDefault();setDragOver(true);}}
+              onDragLeave={()=>setDragOver(false)}
+              onDrop={handleDrop}
+            >
+              <input ref={fileRef} type="file" accept=".txt,.pdf,.md" onChange={e=>handleFiles(e.target.files)}/>
+              {uploading?(
+                <>
+                  <div className="upload-icon"><i className="fa fa-spinner fa-spin"/></div>
+                  <div className="upload-text">Processing & embedding…</div>
+                  <div className="progress-wrap show"><div className="progress-bar"><div className="progress-fill"/></div></div>
+                </>
+              ):(
+                <>
+                  <div className="upload-icon"><i className="fa fa-file-arrow-up"/></div>
+                  <div className="upload-text">Drop file here or <strong>browse</strong></div>
+                  <div className="upload-text" style={{marginTop:3}}>Supported: .txt · .pdf · .md</div>
+                </>
+              )}
+            </div>
+            <button className="ingest-btn" onClick={handleIngest} disabled={ingesting}>
+              {ingesting?<><i className="fa fa-spinner fa-spin"/> Ingesting…</>:<><i className="fa fa-folder-open"/> Load from /data folder</>}
+            </button>
+          </div>
+
+          {/* Doc list */}
+          <div className="sidebar-section" style={{borderBottom:'none',paddingBottom:4}}>
+            <div className="section-label"><i className="fa fa-database"/> Indexed Documents ({docs.length})</div>
+          </div>
+          <div className="doc-list">
+            {docs.length===0?(
+              <div style={{textAlign:'center',color:'var(--muted)',fontSize:'.75rem',padding:'16px 0'}}>
+                <i className="fa fa-inbox" style={{fontSize:'1.5rem',marginBottom:6,display:'block'}}/> No documents indexed yet
+              </div>
+            ):docs.map((d,i)=><DocCard key={i} doc={d}/>)}
+          </div>
+
+          {/* System info */}
+          {health&&(
+            <div className="sys-info">
+              <div className="section-label" style={{marginBottom:8}}><i className="fa fa-circle-check"/> Status</div>
+              <div className="sys-row"><span className="sys-label">Service</span><span className="sys-val green">● Online</span></div>
+              <div className="sys-row"><span className="sys-label">Documents</span><span className="sys-val">{health.chunks_indexed} chunks</span></div>
+              <div className="sys-row"><span className="sys-label">Version</span><span className="sys-val">{health.version}</span></div>
+            </div>
+          )}
+        </div>
+
+        {/* CHAT */}
+        <div className="chat-area">
+
+          <div className="messages">
+            {msgs.length===0?(
+              <div className="welcome-wrap">
+                <div className="welcome-logo"><i className="fa fa-brain"/></div>
+                <div className="welcome-title">MindCare AI</div>
+                <div className="welcome-sub">
+                  Your AI-powered clinical assistant by Mindbowser.<br/>
+                  Ask questions based on your healthcare documents — grounded, accurate, and source-cited.
+                </div>
+                <div className="suggestion-grid">
+                  {WELCOME_CARDS.map((c,i)=>(
+                    <div className="sug-card" key={i} onClick={()=>send(c.text)}>
+                      <div className="sug-card-icon">{c.icon}</div>
+                      <div className="sug-card-text">{c.text}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ):msgs.map((m,i)=><Message key={i} msg={m}/>)}
+            <div ref={endRef}/>
+          </div>
+
+          {/* INPUT */}
+          <div className="input-section">
+            <div className="chip-row">
+              {CHIPS.map((c,i)=>(
+                <span className="chip" key={i} onClick={()=>send(c)}>{c}</span>
+              ))}
+            </div>
+            <div className="input-row">
+              <textarea
+                ref={taRef}
+                className="input-box"
+                rows={1}
+                placeholder="Ask MindCare AI a healthcare question…"
+                value={input}
+                onChange={e=>setInput(e.target.value)}
+                onKeyDown={onKey}
+                disabled={loading}
+              />
+              <button className="send-btn" onClick={()=>send()} disabled={loading||!input.trim()}>
+                {loading?<i className="fa fa-spinner fa-spin"/>:<i className="fa fa-paper-plane"/>}
+              </button>
+            </div>
+            <div className="input-hint">
+              MindCare AI answers only from your uploaded documents · Press Enter to send · Shift+Enter for new line
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {toast&&(
+        <div className={`toast ${toast.type}`}>
+          <i className={`fa ${toast.type==='success'?'fa-circle-check':toast.type==='error'?'fa-circle-xmark':'fa-circle-info'}`}/>
+          {toast.msg}
+        </div>
+      )}
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>

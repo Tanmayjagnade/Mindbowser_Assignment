@@ -1,0 +1,46 @@
+﻿MEDICATION REFILL POLICY
+MedAssist Healthcare System
+Document Version: 2024-01
+
+PURPOSE
+This policy outlines the process for requesting prescription medication refills at MedAssist Healthcare System to ensure patient safety and continuity of care.
+
+ELIGIBLE MEDICATIONS FOR REFILL
+Refills are available for:
+- Chronic disease medications (hypertension, diabetes, thyroid, asthma, etc.) prescribed and managed at MedAssist
+- Mental health medications under active management by a MedAssist provider
+- Other medications with active prescriptions issued by a MedAssist physician
+
+INELIGIBLE FOR REFILL WITHOUT IN-PERSON EVALUATION
+The following categories require an in-person evaluation or telehealth visit before refills are approved:
+- Controlled substances (opioids, benzodiazepines, stimulants) — subject to DEA and state regulations
+- Antibiotics and antifungals (require evaluation to confirm ongoing need)
+- Medications with significant side effects requiring monitoring (e.g., blood thinners, chemotherapy agents)
+- Any medication where the original prescription has expired
+
+HOW TO REQUEST A REFILL
+1. Patient Portal: Log in to medassist.example.com/portal and select "Request Refill" under your active prescriptions.
+2. Phone: Call 1800-MED-REFILL during business hours (Monday to Friday, 8:00 AM - 5:00 PM).
+3. Pharmacy Direct: Many pharmacies can request refills directly from your provider on your behalf with a signed authorization.
+4. Telehealth: Medication refill reviews can be conducted during a telehealth visit if the medication is non-controlled and does not require physical examination.
+
+PROCESSING TIME
+- Routine refill requests: Processed within 2-3 business days.
+- Urgent refills: Same-day processing is available for critical medications (e.g., insulin, heart medications) when the request is submitted before 12:00 PM.
+- Controlled substances: Require an appointment (in-person or telehealth) and cannot be processed as a routine refill.
+
+EARLY REFILL REQUESTS
+Refills may be requested up to 7 days before the current supply runs out. Requests submitted too early (more than 7 days early) will be queued and processed at the appropriate time. Insurance plans typically impose a fill limit of no earlier than 75% of supply used.
+
+MEDICATION CHANGES
+If you are requesting a dose change, medication switch, or new medication, an appointment is required. Refill requests are for continuation of existing, unchanged prescriptions only.
+
+MAIL-ORDER PHARMACY
+Patients with chronic conditions may benefit from mail-order pharmacy services, which allow 90-day supplies to be delivered directly to your home. Ask your provider or pharmacist about enrolling in a mail-order program.
+
+WHAT TO DO IF YOU MISS A DOSE
+For missed dose guidance, refer to your prescription label or call 1800-MED-ASSIST. Do not double your next dose unless specifically instructed by your physician.
+
+CONTACT
+Refill requests: 1800-MED-REFILL or medassist.example.com/portal
+Pharmacy partnership inquiries: pharmacy@medassist.example.com

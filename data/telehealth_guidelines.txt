@@ -1,0 +1,60 @@
+﻿TELEHEALTH CONSULTATION GUIDELINES
+MedAssist Healthcare System
+Document Version: 2024-01
+
+WHAT IS TELEHEALTH?
+Telehealth at MedAssist Healthcare System refers to healthcare services delivered through secure video conferencing, phone consultations, and remote patient monitoring tools. Telehealth allows patients to receive care from licensed MedAssist providers from the comfort of their home or any private setting.
+
+ELIGIBLE CONDITIONS AND VISIT TYPES
+Telehealth visits are appropriate for:
+- Follow-up appointments after recent in-person visits or hospitalizations
+- Chronic disease management (diabetes check-ins, hypertension monitoring, asthma reviews)
+- Mental health and behavioral health sessions (therapy, psychiatry follow-ups)
+- Minor illness consultations (cold, flu, rash, UTI symptoms, mild allergies)
+- Medication refill reviews for non-controlled prescriptions
+- Lab result reviews and care plan updates
+- Smoking cessation and wellness coaching
+
+CONDITIONS REQUIRING IN-PERSON VISIT
+Telehealth is NOT appropriate for:
+- Medical emergencies (call 911 or go to the nearest ER)
+- Conditions requiring physical examination, diagnostic imaging, or lab work
+- Procedures, injections, or wound care
+- New patient comprehensive physical exams
+- Controlled substance prescriptions (require in-person evaluation per DEA regulations)
+- Suspected fractures, severe abdominal pain, or chest pain
+
+TECHNOLOGY REQUIREMENTS
+To participate in a telehealth visit, you need:
+- A device with a camera and microphone: smartphone, tablet, or computer
+- A stable internet connection (minimum 5 Mbps recommended)
+- The MedAssist telehealth platform or the designated video platform link (sent via email/SMS before your appointment)
+- A private, quiet location to discuss your health
+
+No special software download is required for most video visits. A browser link will be provided.
+
+HOW TO SCHEDULE A TELEHEALTH VISIT
+1. Log in to the MedAssist patient portal at medassist.example.com/portal
+2. Select "Schedule a Telehealth Visit" from the appointment menu
+3. Choose your provider, preferred date and time
+4. Complete the pre-visit intake questionnaire
+5. You will receive a confirmation email with the secure video link
+
+TELEHEALTH VISIT PROCESS
+- Join your appointment 5 minutes early using the link in your confirmation email.
+- Have your list of current medications and recent symptoms ready.
+- Ensure your device is charged and your camera is working before the visit.
+- Your provider will conduct the consultation and may review your records during the session.
+- A visit summary and any new prescriptions will be available in your patient portal within 24 hours.
+
+MEDICATION REFILLS VIA TELEHEALTH
+Medication refill requests may be reviewed during telehealth visits. Medications eligible for telehealth refill include non-controlled, stable chronic medications. The provider will review your current medication list, recent lab results (if applicable), and your reported response to treatment before approving a refill. Controlled substances cannot be prescribed or refilled via telehealth under federal regulations.
+
+PRIVACY AND SECURITY
+All MedAssist telehealth sessions are conducted on HIPAA-compliant, encrypted platforms. Video sessions are not recorded without explicit patient consent. You have the right to discontinue the telehealth visit at any time.
+
+INSURANCE AND BILLING FOR TELEHEALTH
+Most major insurers, including Medicare and Medicaid, now cover telehealth visits at the same or similar rates as in-person visits. Copayments or deductibles may still apply. Patients are encouraged to verify telehealth coverage with their insurer prior to scheduling.
+
+TECHNICAL SUPPORT
+For technical issues before or during a telehealth visit: 1800-MED-ASSIST, option 3.
