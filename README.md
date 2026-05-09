@@ -342,4 +342,4 @@ pytest tests/ -v
 
 ---
 
-*Built by Tanmay Ambekar for the Mindbowser AI Engineer Hackathon Assignment*
+*Built by Tanmay Jagnade for the Mindbowser AI Engineer Hackathon Assignment*
