@@ -7,7 +7,9 @@
 
 ## Demo Video
 
-> **[Click here to watch the demo video](#)** *(Add your video link here)*
+> **[▶ Watch Demo — MindCare AI by Mindbowser](https://github.com/Tanmayjagnade/Mindbowser_Assignment/releases/download/v1.0.0/mindbowser_assignment.mp4)**
+>
+> *MindCare AI Healthcare RAG Assistant — Full demo including document upload, RAG Q&A, appointment booking, and guardrails.*
 
 ---
 

@@ -294,6 +294,50 @@ def list_documents():
 
 
 # ---------------------------------------------------------------------------
+# Delete document endpoint
+# ---------------------------------------------------------------------------
+
+@app.delete(
+    "/documents/{filename}",
+    summary="Delete a document and all its chunks from the vector store",
+    tags=["Ingestion"],
+)
+def delete_document(filename: str):
+    """
+    Removes all chunks for the given document from ChromaDB
+    and deletes the source file from the data directory.
+    """
+    try:
+        rag = RAGService()
+        result = rag.collection.get(where={"document": filename}, include=["metadatas"])
+        ids = result.get("ids", [])
+        if ids:
+            rag.collection.delete(ids=ids)
+            logger.info("Deleted %d chunks for document: %s", len(ids), filename)
+
+        # Also remove the file from data directory
+        file_path = Path(cfg.data_dir) / filename
+        file_deleted = False
+        if file_path.exists():
+            file_path.unlink()
+            file_deleted = True
+            logger.info("Deleted file: %s", file_path)
+
+        global _agent
+        _agent = None  # reset agent after deletion
+
+        return {
+            "status": "success",
+            "filename": filename,
+            "chunks_deleted": len(ids),
+            "file_deleted": file_deleted,
+        }
+    except Exception as exc:
+        logger.exception("Delete failed for %s", filename)
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+# ---------------------------------------------------------------------------
 # Serve the React UI
 # ---------------------------------------------------------------------------
 

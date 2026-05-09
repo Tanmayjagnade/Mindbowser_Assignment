@@ -71,6 +71,8 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);height:100
 .doc-chunks{font-size:.68rem;color:var(--muted);background:#e2e8f0;border-radius:10px;padding:2px 7px;flex-shrink:0;}
 .doc-chevron{font-size:.6rem;color:var(--muted);transition:transform .2s;}
 .doc-card.expanded .doc-chevron{transform:rotate(180deg);}
+.del-btn{background:none;border:none;color:#94a3b8;cursor:pointer;padding:2px 4px;border-radius:4px;font-size:.75rem;flex-shrink:0;transition:color .15s;}
+.del-btn:hover{color:#ef4444;}
 .chunk-preview{margin-top:8px;display:none;}
 .doc-card.expanded .chunk-preview{display:block;}
 .chunk-item{background:#fff;border:1px solid #e2e8f0;border-radius:6px;padding:6px 8px;margin-bottom:4px;font-size:.68rem;color:#475569;line-height:1.5;}
@@ -178,19 +180,21 @@ const {useState,useEffect,useRef,useCallback} = React;
 const API = '';
 
 const CHIPS = [
-  "What are my HIPAA rights?",
-  "How to request medication refill?",
-  "Telehealth consultation process",
-  "Book cardiology for Monday",
-  "Diet after hospital discharge",
-  "Insurance eligibility FAQ",
+  "What are my rights under HIPAA?",
+  "How do I request a medication refill?",
+  "Can I get telehealth for a follow-up?",
+  "Book a cardiology appointment for Monday",
+  "What diet should I follow after discharge?",
+  "What is the cancellation policy?",
+  "What technology do I need for telehealth?",
+  "What is the no-show fee for missed appointments?",
 ];
 
 const WELCOME_CARDS = [
-  {icon:"🏥",text:"What are patient rights under HIPAA privacy guidelines?"},
-  {icon:"💊",text:"How do I request a medication refill through the portal?"},
-  {icon:"📅",text:"Book a cardiology appointment for Monday morning"},
-  {icon:"🖥️",text:"Can I get a telehealth consultation for a follow-up visit?"},
+  {icon:"🏥", text:"What are my rights under HIPAA privacy guidelines?"},
+  {icon:"💊", text:"How do I request a medication refill through telehealth?"},
+  {icon:"📅", text:"Book a cardiology appointment for Monday morning"},
+  {icon:"🩺", text:"What should I do after being discharged from hospital?"},
 ];
 
 /* ─── helpers ─── */
@@ -205,15 +209,32 @@ function IntentBadge({intent}){
 }
 
 /* ─── document card ─── */
-function DocCard({doc}){
+function DocCard({doc, onDelete}){
   const [open,setOpen]=useState(false);
+  const [deleting,setDeleting]=useState(false);
   const icon = doc.filename.endsWith('.pdf') ? 'fa-file-pdf' : 'fa-file-lines';
+
+  const handleDelete = async (e) => {
+    e.stopPropagation();
+    if(!confirm(`Delete "${doc.filename}" and all its chunks?`)) return;
+    setDeleting(true);
+    try {
+      const r = await fetch(`${API}/documents/${encodeURIComponent(doc.filename)}`, {method:'DELETE'});
+      const d = await r.json();
+      if(d.status==='success') onDelete(doc.filename);
+    } catch(e) { alert('Delete failed: ' + e.message); }
+    finally { setDeleting(false); }
+  };
+
   return(
     <div className={`doc-card ${open?'expanded':''}`} onClick={()=>setOpen(!open)}>
       <div className="doc-top">
         <i className={`doc-icon fa ${icon}`}/>
         <span className="doc-name" title={doc.filename}>{doc.filename}</span>
-        <span className="doc-chunks">{doc.chunks}</span>
+        <span className="doc-chunks">{doc.chunks} chunks</span>
+        <button className="del-btn" onClick={handleDelete} title="Delete document" disabled={deleting}>
+          <i className={`fa ${deleting?'fa-spinner fa-spin':'fa-trash'}`}/>
+        </button>
         <i className="doc-chevron fa fa-chevron-down"/>
       </div>
       {open && doc.sample_chunks && (
@@ -458,7 +479,11 @@ function App(){
               <div style={{textAlign:'center',color:'var(--muted)',fontSize:'.75rem',padding:'16px 0'}}>
                 <i className="fa fa-inbox" style={{fontSize:'1.5rem',marginBottom:6,display:'block'}}/> No documents indexed yet
               </div>
-            ):docs.map((d,i)=><DocCard key={i} doc={d}/>)}
+            ):docs.map((d,i)=>(
+              <DocCard key={d.filename} doc={d}
+                onDelete={name=>{ setDocs(prev=>prev.filter(x=>x.filename!==name)); fetchHealth(); showToast(`Deleted ${name}`,'success'); }}
+              />
+            ))}
           </div>
 
           {/* System info */}
